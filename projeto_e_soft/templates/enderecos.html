@@ -1,0 +1,15 @@
+{% extends "page.html" %}
+
+{% block content %}
+    <h2>Endereços Cadastrados:</h2>
+
+    <ul style="font-size: 18px">
+        {% for endereco in enderecos %}
+        <li>{{ endereco.end }}, {{ endereco.num }} - {{ endereco.cidade }}/{{ endereco.uf }} <br> <b>Descrição:</b> {{ endereco.descrição }}</li>
+         <br>
+        {% endfor %}
+    </ul>
+    <a href="cadastro/">
+        <button type="button">Novo Cadastro</button>
+    </a>
+{% endblock %}
